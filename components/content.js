@@ -19,6 +19,9 @@ export default function Content({ content }) {
         <div className="font-normal text-pink-700 text-3xl  mt-3 mb-3">
           {item.subtitle ? item.subtitle : ''}
         </div>
+        <div className="font-normal text-black-700 text-1/2xl  mt-3 mb-3">
+          {item.content ? item.content : ''}
+        </div>
       </div>
     );
   };
@@ -36,7 +39,7 @@ export default function Content({ content }) {
       <PresentContent item={content[currentPage]} />
       <div className="flex bottom-10 justify-between">
         <>
-          {currentPage > content.length ? (
+          {currentPage && currentPage > 0 ? (
             <button className="" onClick={() => decrementPage()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +61,10 @@ export default function Content({ content }) {
           )}
         </>
 
-        {/* <button className="">Current:{currentPage}</button> */}
-        {currentPage < content.length ? (
+        <button className="">
+          Current:{currentPage} {content.length}
+        </button>
+        {currentPage < content.length - 1 ? (
           <button className="" onClick={() => incrementPage()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
