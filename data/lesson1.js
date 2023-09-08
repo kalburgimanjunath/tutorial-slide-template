@@ -3,7 +3,9 @@ export const lesson1 = [
     id: 1,
     title: 'Js Quick Guide',
     subtitle: 'ES6 Guide',
-    content: '',
+    content: ' content goes here',
+    list: ['hello world', 'abc', 'xyz'],
+    image: 'https://picsum.photos/200/300',
   },
   {
     id: 2,

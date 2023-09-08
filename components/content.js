@@ -22,6 +22,26 @@ export default function Content({ content }) {
         <div className="font-normal text-black-700 text-1/2xl  mt-3 mb-3">
           {item.content ? item.content : ''}
         </div>
+        <div className="font-normal text-black-700 text-1/2xl  mt-3 mb-3">
+          {item.image ? (
+            <>
+              <img src={item.image} />
+            </>
+          ) : (
+            ''
+          )}
+        </div>
+        <div className="font-normal text-black-700 text-1/2xl  mt-3 mb-3">
+          {item.list ? (
+            <ul className="list-disc m-5">
+              {item.list.map((listitem) => {
+                return <li>{listitem}</li>;
+              })}
+            </ul>
+          ) : (
+            ''
+          )}
+        </div>
       </div>
     );
   };
