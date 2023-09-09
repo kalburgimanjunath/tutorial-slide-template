@@ -1,3 +1,3 @@
-module.export = {
-  swcMinify: false,
-};
+// module.export = {
+//   swcMinify: false,
+// };
